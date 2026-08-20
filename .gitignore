@@ -1,10 +1,14 @@
-# Only ship the rolling Mindflow-latest.dmg.
-# Versioned DMGs (Mindflow-X.Y.Z.dmg) and any Meetflow-* legacy artifacts
-# bloat the repo and aren't referenced by VERSION.json (the auto-updater
-# always points at Mindflow-latest.dmg). Local copies stay on disk during
-# the release flow; git just doesn't track them.
-Mindflow-*.dmg
-!Mindflow-latest.dmg
-Meetflow-*.dmg
+# DMGs are NEVER tracked here. They live in GitHub Releases:
+#   https://github.com/mindflow-io/mindflow-io.github.io/releases
+#
+# Until 2026-08-20 this file carried `!Mindflow-latest.dmg`, deliberately
+# tracking the rolling DMG because the auto-updater downloaded it from Pages.
+# That cost ~77 MB of permanent git history per release — 2.3 GB of blobs
+# across 41 commits, 713 MB packed, and Pages deploys over 13 minutes.
+# History was rewritten to purge them; VERSION.json now carries a `dmgUrl`
+# pointing at the Release asset, and release.sh uploads there instead.
+#
+# Do not re-add a negation for Mindflow-latest.dmg.
+*.dmg
 
 .DS_Store
