@@ -35,7 +35,7 @@
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "Mindflow",
-    "operatingSystem": "macOS 14+",
+    "operatingSystem": "macOS 14.2+",
     "applicationCategory": "ProductivityApplication",
     "offers": {
       "@type": "Offer",
@@ -2162,7 +2162,7 @@ contingent on the auth migration completing by end of February.</span></pre>
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
           </div>
           <h3>Launch &amp; record</h3>
-          <p>Open Mindflow from Applications and grant Screen Recording when asked. The speech model downloads once, then everything runs on your Mac.</p>
+          <p>Open Mindflow from Applications and allow System Audio Recording when asked &mdash; that is what lets Mindflow hear the other people in your meetings. It never asks for Screen Recording. The speech model downloads once, then everything runs on your Mac.</p>
         </div>
       </div>
 
@@ -2218,7 +2218,7 @@ contingent on the auth migration completing by end of February.</span></pre>
       </div>
 
       <figure class="architecture-diagram reveal">
-        <img src="public/architecture.svg" alt="Mindflow data flow: system audio is captured via ScreenCaptureKit, transcribed locally by whisper.cpp, saved to Markdown and JSONL files on disk, and served to your AI assistant through a local MCP server. Nothing leaves your Mac.">
+        <img src="public/architecture.svg" alt="Mindflow data flow: system audio is captured via a Core Audio process tap, transcribed locally by whisper.cpp, saved to Markdown and JSONL files on disk, and served to your AI assistant through a local MCP server. Nothing leaves your Mac.">
       </figure>
 
       <div class="pledge-card reveal">
