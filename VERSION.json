@@ -1,6 +1,6 @@
 {
-  "version": "0.8.0",
+  "version": "0.8.1",
   "severity": "normal",
-  "releaseNotes": "https://mindflow-io.github.io/release-notes/v0.8.0.md",
+  "releaseNotes": "https://mindflow-io.github.io/release-notes/v0.8.1.md",
   "minimumVersionBeforeForced": null
 }
